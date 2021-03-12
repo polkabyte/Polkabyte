@@ -1,0 +1,19 @@
+[package]
+name = "node-rpc-client"
+edition = "2018"
+version = "0.1.0"
+authors = ["trust dev"]
+license = 'Apache-2.0'
+
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]
+
+[dependencies]
+futures = "0.1.29"
+hyper = "~0.12.35"
+jsonrpc-core-client = { version = "15.1.0", default-features = false, features = ["http"] }
+log = "0.4.8"
+node-primitives = { path = "../primitives" }
+sp-tracing = { version = "3.0.0", git = "https://github.com/paritytech/substrate" }
+sc-rpc = { version = "3.0.0", git = "https://github.com/paritytech/substrate" }
